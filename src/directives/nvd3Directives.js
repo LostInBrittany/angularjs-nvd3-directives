@@ -205,10 +205,10 @@
                                     }
 
                                     if(attrs.tooltipcontent){
-					//chart.tooltipContent( scope.tooltipcontent() );
-                    			//console.log("tooltipcontent", scope.tooltipcontent());
-                    			chart.interactiveLayer.tooltip.contentGenerator(scope.tooltipcontent());
-                    			chart.interactiveLayer.tooltip.gravity('n');
+                                      //chart.tooltipContent( scope.tooltipcontent() );
+                                      //console.log("tooltipcontent", scope.tooltipcontent());
+                                      chart.interactiveLayer.tooltip.contentGenerator(scope.tooltipcontent());
+                                      chart.interactiveLayer.tooltip.gravity('n');
                                     }
 
                                     scope.d3Call(data, chart);
@@ -2298,7 +2298,7 @@
                         if (data && angular.isDefined(scope.filtername) && angular.isDefined(scope.filtervalue)) {
                             data =  $filter(scope.filtername)(data, scope.filtervalue);
                         }
-                        
+
                         if(data){
                             //if the chart exists on the scope, do not call addGraph again, update data and call the chart.
                             if(scope.chart){
