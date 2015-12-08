@@ -1,9 +1,8 @@
 {
-  "name": "angularjs-nvd3-community-directives",
-  "version": "0.0.7",
-  "description": "Fork of angular.js directives for nvd3.js, using nvd3-community.",
+  "name": "angularjs-nvd3-directives",
+  "description": "Angular.js directives for nvd3.js.",
   "authors": [
-    "Christian Maurer"
+    "Christian Maurer", "Horacio Gonzalez"
   ],
   "license": "Apache License, v2.0",
   "homepage": "https://github.com/LostInBrittany/angularjs-nvd3-directives",
@@ -21,19 +20,16 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "test"
   ],
   "dependencies": {
     "angular": "~1.2.4",
     "d3": "~3.4.1",
-    "nvd3-community": "~1.7.0"
+    "nvd3": "~1.7.0"
   },
   "devDependencies": {
     "moment": "~2.5.0",
-    "angular-route": "~1.2.13"
-  },
-  "resolutions": {
-    "d3": "~3.4.1"
+    "angular-route": "~1.2.13",
+    "angular-mocks": "~1.2.13"
   }
 }
