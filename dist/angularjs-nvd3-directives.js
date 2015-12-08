@@ -1,4 +1,4 @@
-/*! angularjs-nvd3-directives - v0.0.8 - 2015-02-04
+/*! angularjs-nvd3-directives - v0.0.8 - 2015-12-08
  * http://angularjs-nvd3-directives.github.io/angularjs-nvd3-directives
  * Copyright (c) 2015 Christian Maurer; Licensed Apache License, v2.0 */
 ( function () {
@@ -929,7 +929,10 @@
                     chart.useInteractiveGuideline( attrs.useinteractiveguideline === undefined ? false : attrs.useinteractiveguideline === 'true' );
                   }
                   if ( attrs.tooltipcontent ) {
-                    chart.tooltipContent( scope.tooltipcontent() );
+                    //chart.tooltipContent( scope.tooltipcontent() );
+                    //console.log("tooltipcontent", scope.tooltipcontent());
+                    chart.interactiveLayer.tooltip.contentGenerator( scope.tooltipcontent() );
+                    chart.interactiveLayer.tooltip.gravity( 'n' );
                   }
                   scope.d3Call( data, chart );
                   nv.utils.windowResize( chart.update );

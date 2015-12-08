@@ -205,7 +205,10 @@
                                     }
 
                                     if(attrs.tooltipcontent){
-                                        chart.tooltipContent(scope.tooltipcontent());
+					//chart.tooltipContent( scope.tooltipcontent() );
+                    			//console.log("tooltipcontent", scope.tooltipcontent());
+                    			chart.interactiveLayer.tooltip.contentGenerator(scope.tooltipcontent());
+                    			chart.interactiveLayer.tooltip.gravity('n');
                                     }
 
                                     scope.d3Call(data, chart);
